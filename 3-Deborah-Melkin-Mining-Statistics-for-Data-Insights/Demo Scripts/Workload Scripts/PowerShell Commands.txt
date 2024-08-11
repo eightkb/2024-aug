@@ -1,0 +1,9 @@
+# Run each of these in a separate query window on the VM
+
+Invoke-DbaQuery -SqlInstance localhost -Database StackOverflow_MimicUse -InputFile "S:\Shared Content\Misc\Mining Stats\103 - StackOverflow_MimicUse Create new posts.sql"
+
+Invoke-DbaQuery -SqlInstance localhost -Database StackOverflow_MimicUse -InputFile "S:\Shared Content\Misc\Mining Stats\105 - StackOverflow_MimicUse Create Votes.sql"
+
+Invoke-DbaQuery -SqlInstance localhost -Database StackOverflow_MimicUse -InputFile "S:\Shared Content\Misc\Mining Stats\107 - StackOverflow_MimicUse Create Comments.sql"
+
+$a = Invoke-DbaQuery -SqlInstance localhost -Database StackOverflow_MimicUse -InputFile "S:\Shared Content\Misc\Mining Stats\109 - StackOverflow_MimicUse Top Post Summary.sql"
